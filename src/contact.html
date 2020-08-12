@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>WEB222 Store</title>
+    
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="contactStyle.css" type="text/css" />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          type="text/css"
+        />
+      </head>
+
+      <header>
+        <div id="title">
+          <a href="index.html">
+            <h1>Art Garage</h1>
+            <i class="fas fa-palette"></i>
+          </a>
+        </div>
+        <div id="to-contact-page">
+          <a id="contact-page-link" href="./contact.html">CONTACT US</a>
+        </div>
+      </header>
+
+      <body>
+          <form id="contact-form" action="https://httpbin.org/post" method="POST">
+              <label for="contact-name"><span class="red-asterisk">*</span> Name</label>
+              <input
+                id="name"
+                name="name"
+                autocomplete="name"
+                type="text"
+                placeholder="John Doe"
+                autofocus
+                tabindex="1"
+                required
+              >
+
+              <label for="contact-email"><span class="red-asterisk">*</span> Email</label>
+              <input
+                id="contact-email"
+                name="contact-email"
+                autocomplete="email"
+                placeholder="example@email.com"
+                type="email"
+                tabindex="2"
+                required
+              >
+
+              <label for="contact-address"> <span class="red-asterisk">*</span>Street Address</label>
+              <input
+                id="contact-address"
+                name="contact-address"
+                autocomplete="street-address"
+                type="text"
+                tabindex="3"
+                required
+              >
+
+              <label for="contact-city"><span class="red-asterisk">*</span> City</label>
+              <input
+                id="contact-city"
+                name="contact-city"
+                list="cities-list"
+                tabindex="4"
+                required
+              >
+              <datalist id="cities-list">
+                  <option value="Calgary">Calgary</option>
+                  <option value="Edmonton">Edmonton</option>
+                  <option value="Hamilton">Hamilton</option>
+                  <option value="Kitchener">Kitchener</option>
+                  <option value="Montreal">Montreal</option>
+                  <option value="Ottawa">Ottawa</option>
+                  <option value="Quebec City">Quebec City</option>
+                  <option value="Toronto">Toronto</option>
+                  <option value="Vancouver">Vancouver</option>                 
+                  <option value="Winnipeg">Winnipeg</option>
+              </datalist>
+
+              <label for="contact-postal-code"><span class="red-asterisk">*</span> Postal Code</label>
+              <input
+                id="contact-postal-code"
+                name="contact-postal-code"
+                type="text"
+                tabindex="5"
+                pattern="^[A-za-z]\d[A-za-z][ -]\d[A-za-z]\d$" title="Example: M2J 2X5"
+                placeholder="M2J 2X5"
+                required
+              >
+              <label>What is the problem about: </label>
+              <div id="contact-about-choices">
+                <input type="radio" id="contact-about-question" name="contact-about-option">
+                <label for="contact-about-question">Question</label>
+                <input type="radio" id="contact-about-comment" name="contact-about-option">
+                <label for="contact-about-comment">Comment</label>
+                <input type="radio" id="contact-about-order-problem" name="contact-about-option">
+                <label for="contact-about-order-problem">Order Problem</label>
+              </div>
+              <label for="order-number"><span class="red-asterisk">*</span> Order Number</label>
+              <input
+                id="order-number"
+                name="order-number"
+                type="hidden"
+                pattern="^[0-9]*$" title="All digits with no spaces"
+                placeholder="1234"
+              >
+              
+
+              <label for="contact-message"><span class="red-asterisk">*</span> Message</label>
+              <textarea
+                id="contact-message"
+                name="contact-message"
+                rows="10"
+                tabindex="6"
+                placeholder="Please put your message here..."
+                required
+              ></textarea>
+
+              <div class=buttons>
+                <input type="submit" name="submit" value="Submit" tabindex="7">
+              </div>
+              <input name="my-name" type="hidden" value="Calvin Ong">
+          </form>
+
+          <script src="./contactScript.js"></script>
+      </body>
+</html>
