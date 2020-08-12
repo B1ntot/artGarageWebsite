@@ -93,11 +93,11 @@
               >
               <label>What is the problem about: </label>
               <div id="contact-about-choices">
-                <input type="radio" id="contact-about-question" name="contact-about-option">
+                <input type="radio" id="contact-about-question" name="contact-about-option" required>
                 <label for="contact-about-question">Question</label>
-                <input type="radio" id="contact-about-comment" name="contact-about-option">
+                <input type="radio" id="contact-about-comment" name="contact-about-option" required>
                 <label for="contact-about-comment">Comment</label>
-                <input type="radio" id="contact-about-order-problem" name="contact-about-option">
+                <input type="radio" id="contact-about-order-problem" name="contact-about-option" required>
                 <label for="contact-about-order-problem">Order Problem</label>
               </div>
               <label for="order-number"><span class="red-asterisk">*</span> Order Number</label>
@@ -107,6 +107,7 @@
                 type="hidden"
                 pattern="^[0-9]*$" title="All digits with no spaces"
                 placeholder="1234"
+                required
               >
               
 
